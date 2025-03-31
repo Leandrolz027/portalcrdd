@@ -87,18 +87,38 @@
             transform: translateY(-5px); 
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-        @media (max-width: 1024px) {
+         @media (max-width: 1200px) {
             .services {
-                grid-template-columns: repeat(4, 1fr); 
+                grid-template-columns: repeat(4, 1fr);
+                padding: 50px;
             }
         }
+
+        @media (max-width: 1024px) {
+            .services {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .services {
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
+                padding: 20px;
             }
             .service-card {
                 width: 160px;
                 height: 210px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 10px;
+            }
+            .service-card {
+                width: 100%;
+                height: auto;
             }
         }
     </style>
