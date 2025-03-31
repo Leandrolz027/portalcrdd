@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário do Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-input {
+            margin: 10px 0;
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #fc92dc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #f773cf;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário</h2>
+        <form id="serviceForm">
+            <input type="text" name="informacao1" class="form-input" placeholder="Informação 1" required>
+            <input type="text" name="informacao2" class="form-input" placeholder="Informação 2" required>
+            <input type="text" name="informacao3" class="form-input" placeholder="Informação 3" required>
+            <input type="text" name="informacao4" class="form-input" placeholder="Informação 4" required>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('serviceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Simulando o envio de dados e redirecionando o usuário
+            alert('Formulário enviado com sucesso!');
+            window.location.href = "servicos.html"; // Redirecionar após enviar
+        });
+    </script>
+</body>
+</html>
